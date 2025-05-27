@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/css/style.css">
+<head>
+    <title>Márkák listája</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav>
+    <a href="/shoes">Cipők</a>
+    <a href="/brands">Márkák</a>
+</nav>
+<h1>Márkák</h1>
+<a href="/brands/create">Új márka hozzáadása</a>
+<table border="1">
+    <thead>
+        <tr><th>ID</th><th>Név</th></tr>
+    </thead>
+    <tbody>
+        <tr th:each="brand : ${brands}">
+            <td th:text="${brand.id}"></td>
+            <td th:text="${brand.name}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

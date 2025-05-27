@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cipők listája</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav>
+    <a href="/shoes">Cipők</a>
+    <a href="/brands">Márkák</a>
+</nav>
+
+<h1>Cipők</h1>
+<a href='/shoes/create' class="button">Új cipő</a>
+
+<ul th:each='s : ${shoes}'>
+    <li th:text='${s.brand.name + " " + s.model}'></li>
+</ul>
+</body>
+</html>

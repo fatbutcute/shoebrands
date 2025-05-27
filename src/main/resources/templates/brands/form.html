@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Új márka</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Új márka hozzáadása</h1>
+<form th:action="@{/brands/save}" th:object="${brand}" method="post">
+    <label for="name">Márkanév:</label>
+    <input type="text" id="name" th:field="*{name}" />
+    <button type="submit">Mentés</button>
+</form>
+<a href="/brands">Vissza a listához</a>
+</body>
+</html>

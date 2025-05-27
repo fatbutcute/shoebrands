@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Új cipő</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Új cipő hozzáadása</h1>
+<form th:action="@{/shoes/save}" th:object="${shoe}" method="post">
+    <label for="model">Cipő modell:</label>
+    <input type="text" id="model" th:field="*{model}" required /><br/><br/>
+    
+    <label for="brand">Márka:</label>
+    <select id="brand" th:field="*{brand.id}">
+        <option th:each="brand : ${brands}" th:value="${brand.id}" th:text="${brand.name}"></option>
+    </select><br/><br/>
+
+    <button type="submit">Mentés</button>
+</form>
+<a href="/shoes">Vissza a listához</a>
+</body>
+</html>
