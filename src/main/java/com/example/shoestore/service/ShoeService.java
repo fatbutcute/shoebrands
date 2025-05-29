@@ -14,8 +14,14 @@ public class ShoeService {
         this.repository = repository;
     }
 
-    public List<Shoe> findAll() { return repository.findAll(); }
-    public Shoe findById(Long id) { return repository.findById(id).orElse(null); }
-    public Shoe save(Shoe shoe) { return repository.save(shoe); }
-    public void deleteById(Long id) { repository.deleteById(id); }
+    public List<Shoe> findAll() {
+        return repository.findAll(
+
+        ); }
+    public Shoe findById(Long id) {
+        return repository.findById(id).orElse(null); }
+    public Shoe save(Shoe shoe) {
+        return repository.save(shoe); }
+    public void deleteById(Long id) {
+        repository.deleteById(id); }
 }

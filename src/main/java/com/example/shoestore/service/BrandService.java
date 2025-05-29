@@ -13,8 +13,12 @@ public class BrandService {
         this.repository = repository;
     }
 
-    public List<Brand> findAll() { return repository.findAll(); }
-    public Brand findById(Long id) { return repository.findById(id).orElse(null); }
-    public Brand save(Brand brand) { return repository.save(brand); }
-    public void deleteById(Long id) { repository.deleteById(id); }
+    public List<Brand> findAll() {
+        return repository.findAll(); }
+    public Brand findById(Long id) {
+        return repository.findById(id).orElse(null); }
+    public Brand save(Brand brand) {
+        return repository.save(brand); }
+    public void deleteById(Long id) {
+        repository.deleteById(id); }
 }

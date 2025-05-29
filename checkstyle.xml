@@ -16,6 +16,5 @@
         <module name="AvoidStarImport"/>
         <module name="RedundantImport"/>
         <module name="JavadocMethod"/>
-        <module name="JavadocVariable"/>
     </module>
 </module>
